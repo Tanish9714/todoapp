@@ -1,0 +1,23 @@
+.app-wrapper {
+  padding-bottom: 50px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .app-wrapper {
+      padding: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .app-wrapper {
+      padding: 20px;
+  }
+}

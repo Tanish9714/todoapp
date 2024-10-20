@@ -1,0 +1,117 @@
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+  word-wrap: break-word;
+  transition: background-color 0.3s;
+}
+
+.note.completed {
+  background: #d3d3d3;
+}
+
+.note h1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.note p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  float: right;
+  color: #f5ba13;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  margin-left: 3px;
+  padding-right: 10px;
+}
+
+.note button.complete-btn,
+.note button.edit-btn {
+  padding-top: 4px;
+}
+
+.note.editing {
+  border: 2px solid #f5ba13;
+  background-color: #fff3cd;
+  padding: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.note.editing input,
+.note.editing textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+}
+
+.note.editing button {
+  float: right;
+  background: #f5ba13;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.note.editing button:hover {
+  background: #e09c0d;
+}
+
+.note.editing button.cancel {
+  background: #ccc;
+}
+
+.note.editing button.cancel:hover {
+  background: #aaa;
+}
+
+@media (max-width: 600px) {
+  .note {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .note.editing {
+      padding: 10px;
+  }
+
+  .note.editing input,
+  .note.editing textarea {
+      font-size: 1em;
+  }
+
+  .note.editing button {
+      font-size: 0.9em;
+      padding: 4px 8px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .note {
+      width: 300px;
+  }
+
+  .note h1 {
+      font-size: 1.1em;
+  }
+
+  .note p {
+      font-size: 0.9em;
+  }
+}

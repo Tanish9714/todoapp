@@ -1,0 +1,30 @@
+.logout-button {
+    margin-right: 20px;
+    margin-top: -50px; 
+    padding: 10px 20px;
+    border: none;
+    float: right;
+    border-radius: 5px;
+    background-color: #ff4c4c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.logout-button:hover {
+    background-color: #ff0000;
+}
+
+@media (max-width: 600px) {
+    .logout-button {
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .logout-button {
+        padding: 8px 16px;
+    }
+}
