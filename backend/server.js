@@ -30,6 +30,10 @@ app.get("/tasks", async (req, res) => {
   res.json(tasks);
 });
 
+app.get("/hello", (req, res) => {
+  res.send("Hello");
+});
+
 app.post("/tasks", async (req, res) => {
   const { task_title, task_description, userId } = req.body;
   console.log(req.body); 
