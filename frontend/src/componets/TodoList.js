@@ -8,7 +8,7 @@ function TodoList({ todos, setTodos, startEdit }) {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/tasks?userId=${user.uid}`)
+      fetch(`https://todoapp-mmrr.onrender.com/tasks?userId=${user.uid}`)
         .then((response) => response.json())
         .then((data) => setTodos(data))
         .catch((error) => console.error("Error fetching tasks:", error));
@@ -19,7 +19,7 @@ function TodoList({ todos, setTodos, startEdit }) {
   }, [user, setTodos]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/tasks/${id}`, {
+    fetch(`https://todoapp-mmrr.onrender.com/tasks/${id}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -32,7 +32,7 @@ function TodoList({ todos, setTodos, startEdit }) {
   const handleComplete = (id, completed) => {
     const updatedTask = { completed: !completed }; 
   
-    fetch(`http://localhost:5000/tasks/${id}`, {
+    fetch(`https://todoapp-mmrr.onrender.com/tasks/${id}`, {
       method: "PATCH", 
       headers: {
         "Content-Type": "application/json",
