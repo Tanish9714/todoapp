@@ -29,7 +29,7 @@ function CreateArea({ setTodos, editId, setEditId, cancelEdit, input, setInput }
     };
 
     if (editId) {
-      fetch(`http://localhost:5000/tasks/${editId}`, {
+      fetch(`https://todoapp-mmrr.onrender.com/tasks/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function CreateArea({ setTodos, editId, setEditId, cancelEdit, input, setInput }
         })
         .catch((error) => console.error("Error updating task:", error));
     } else {
-      fetch("http://localhost:5000/tasks", {
+      fetch("https://todoapp-mmrr.onrender.com/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ function CreateArea({ setTodos, editId, setEditId, cancelEdit, input, setInput }
   useEffect(() => {
     if (editId) {
       // If in edit mode, fetch the task data
-      fetch(`http://localhost:5000/tasks/${editId}`)
+      fetch(`https://todoapp-mmrr.onrender.com/tasks/${editId}`)
         .then((response) => response.json())
         .then((task) => {
           setInput({
